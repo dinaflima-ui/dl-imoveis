@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Cury</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h2>Site Imobiliário</h2>
+    <a href="/">Home</a>
+    <a href="/visita">Visita</a>
+    <a href="/admin">Admin</a>
+</header>
+
+<hr>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
