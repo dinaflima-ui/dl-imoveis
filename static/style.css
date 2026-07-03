@@ -178,3 +178,65 @@ section{
     margin:10px 0;
     border-radius:8px;
 }
+.hero{
+    background:#003366;
+    color:white;
+    padding:80px;
+    text-align:center;
+}
+
+.hero .btn{
+    background:white;
+    color:#003366;
+    padding:10px 20px;
+    margin:10px;
+    display:inline-block;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.hero .btn2{
+    background:#25D366;
+    color:white;
+    padding:10px 20px;
+    margin:10px;
+    display:inline-block;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.btn-card{
+    display:block;
+    margin-top:10px;
+    background:#003366;
+    color:white;
+    padding:8px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.sobre-box{
+    padding:40px;
+    background:#f5f5f5;
+    text-align:center;
+}

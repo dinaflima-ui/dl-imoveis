@@ -2,82 +2,75 @@
 
 {% block conteudo %}
 
-<section class="banner">
+<!-- HERO -->
+<section class="hero">
 
-    <div class="texto-banner">
+    <h1>Encontre seu imóvel com segurança</h1>
 
-        <h1>Realize o sonho do seu apartamento próprio</h1>
+    <p>Atendimento direto com corretora especializada Cury em São Paulo</p>
 
-        <p>
-            Apartamentos com condições facilitadas,
-            use seu FGTS e aproveite o Minha Casa Minha Vida.
-        </p>
+    <a href="#imoveis" class="btn">Ver imóveis</a>
 
-        <a href="#imoveis" class="botao">Conheça os imóveis</a>
-
-    </div>
+    <a href="https://wa.me/55SEUNUMERO" class="btn2">Falar no WhatsApp</a>
 
 </section>
 
-<section class="imoveis" id="imoveis">
-
-    <h2>Imóveis em destaque</h2>
-
-    <div class="grid">
-
-        {% for imovel in imoveis %}
-
-        <a href="/imovel/{{ imovel['id'] }}" style="text-decoration:none; color:inherit;">
-
-            <div class="card">
-
-                {% if imovel["imagem"] %}
-                    <img src="{{ url_for('static', filename='uploads/' + imovel['imagem']) }}"
-                         style="width:100%; border-radius:10px; margin-bottom:10px;">
-                {% else %}
-                    <div style="width:100%; height:150px; background:#ddd; border-radius:10px; margin-bottom:10px;"></div>
-                {% endif %}
-
-                <h3>{{ imovel["titulo"] }}</h3>
-                <p>{{ imovel["dormitorios"] }} dormitórios • {{ imovel["vagas"] }} vagas</p>
-                <strong>{{ imovel["preco"] }}</strong>
-
-            </div>
-
-        </a>
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-{% endblock %}
+<!-- IMÓVEIS -->
 <section id="imoveis">
 
     <h2>Imóveis disponíveis</h2>
 
+    <div class="grid">
+
     {% for imovel in imoveis %}
 
-    <div class="card">
+        <div class="card">
 
-        <h3>{{ imovel['titulo'] }}</h3>
+            {% if imovel["imagem"] %}
+                <img src="{{ imovel['imagem'] }}" alt="imagem do imóvel">
+            {% endif %}
 
-        <p>{{ imovel['descricao'] }}</p>
+            <h3>{{ imovel['titulo'] }}</h3>
 
-        <p>R$ {{ imovel['preco'] }}</p>
+            <p>{{ imovel['descricao'] }}</p>
 
-    </div>
+            <strong>R$ {{ imovel['preco'] }}</strong>
+
+            <a href="https://wa.me/55SEUNUMERO" class="btn-card">
+                Tenho interesse
+            </a>
+
+        </div>
 
     {% endfor %}
 
+    </div>
+
 </section>
+
+<!-- SOBRE -->
 <section id="sobre">
 
-    <h2>Sobre a corretora</h2>
+    <div class="sobre-box">
 
-    <p>
-        Atendimento personalizado para te ajudar a encontrar seu imóvel ideal.
-    </p>
+        <h2>Sobre a corretora</h2>
+
+        <p>
+            Sou corretora especializada em imóveis Cury em São Paulo.
+            Atendimento personalizado para te ajudar a conquistar seu imóvel com segurança.
+        </p>
+
+    </div>
 
 </section>
+
+<!-- SIMULADOR (base simples) -->
+<section id="simulador">
+
+    <h2>Simulador de Financiamento</h2>
+
+    <p>Em breve você poderá simular seu financiamento aqui de forma automática.</p>
+
+</section>
+
+{% endblock %}
