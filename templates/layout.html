@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <title>Diná Lima | Corretora de Imóveis</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cury Imóveis</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <h2>CURY IMÓVEIS</h2>
+<!-- HEADER -->
+<header class="header">
 
-    <nav>
-        <a href="/">Início</a>
-        <a href="#imoveis">Imóveis</a>
-        <a href="#sobre">Sobre</a>
-        <a href="/login">Área Admin</a>
+    <div class="logo">
+
+        <!-- LOGO DL -->
+        <div class="logo-box">
+            DL
+        </div>
+
+        <div class="logo-text">
+            <strong>Diná Lima</strong>
+            <span>Corretora de Imóveis | CRECI-SP 328864-F</span>
+        </div>
+
+    </div>
+
+    <nav class="menu">
+        <a href="#imoveis">Empreendimentos</a>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#contato">Contato</a>
     </nav>
+
+    <a class="whatsapp-btn" href="https://wa.me/5511988798286" target="_blank">
+        WhatsApp
+    </a>
+
 </header>
 
-{% block conteudo %}
-{% endblock %}
+<!-- CONTEÚDO -->
+<main>
+    {% block conteudo %}{% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <p>Diná Lima | Corretora de Imóveis | CRECI-SP 328864-F</p>
+
+    <p>Email: dina.lima@creci.org.br</p>
+
+    <p>Instagram: @dina.lima88</p>
+
+</footer>
 
 </body>
 </html>
