@@ -5,20 +5,49 @@
 <!-- HERO -->
 <section class="hero">
 
-    <h1>Encontre seu imóvel com segurança</h1>
+    <h1>Realize o sonho do seu apartamento próprio</h1>
 
-    <p>Atendimento direto com corretora especializada Cury em São Paulo</p>
+    <p>Atendimento personalizado com a Diná Lima (Antonietta) | Especialista em empreendimentos Cury</p>
 
-    <a href="#imoveis" class="btn">Ver imóveis</a>
+    <a href="https://wa.me/5511988798286" class="btn" target="_blank">
+        Falar no WhatsApp
+    </a>
 
-    <a href="https://wa.me/55SEUNUMERO" class="btn2">Falar no WhatsApp</a>
+    <a href="#simulador" class="btn2">
+        Simular financiamento
+    </a>
 
 </section>
 
-<!-- IMÓVEIS -->
+<!-- BEM-VINDO -->
+<section class="bemvindo">
+
+    <h2>Seja muito bem-vindo!</h2>
+
+    <p>
+        Encontrar o imóvel ideal vai muito além de escolher um apartamento.
+        É realizar sonhos, conquistar segurança e construir um futuro para sua família.
+    </p>
+
+    <p>
+        Meu compromisso é oferecer um atendimento transparente, humano e personalizado,
+        acompanhando você em cada etapa dessa conquista.
+    </p>
+
+</section>
+
+<!-- EMPREENDIMENTOS -->
 <section id="imoveis">
 
-    <h2>Imóveis disponíveis</h2>
+    <h2>Empreendimentos disponíveis</h2>
+
+    <div class="filtros">
+
+        <button>Lançamentos</button>
+        <button>Em obras</button>
+        <button>Minha Casa Minha Vida</button>
+
+    </div>
 
     <div class="grid">
 
@@ -36,7 +65,7 @@
 
             <strong>R$ {{ imovel['preco'] }}</strong>
 
-            <a href="https://wa.me/55SEUNUMERO" class="btn-card">
+            <a href="https://wa.me/5511988798286" class="btn-card">
                 Tenho interesse
             </a>
 
@@ -49,38 +78,53 @@
 </section>
 
 <!-- SOBRE -->
-<section id="sobre">
+<section id="sobre" class="sobre">
 
-    <div class="sobre-box">
+    <div class="sobre-container">
 
-        <img src="{{ url_for('static', filename='antonietta.jpg') }}" class="foto-corretora">
+        <img src="{{ url_for('static', filename='Antonietta.jpeg') }}" class="foto-sobre">
 
-        <h2>Antonietta Lima</h2>
+        <div>
 
-        <h3>Consultora Imobiliária Especialista Cury</h3>
+            <h2>Diná Lima (Antonietta)</h2>
 
-        <p>
-            Meu objetivo é ajudar você a conquistar o apartamento ideal com um atendimento próximo, transparente e sem pressão.
-        </p>
+            <h4>Corretora de Imóveis | CRECI-SP 328864-F</h4>
 
-        <p>
-            Acompanho todo o processo, desde a simulação do financiamento até a entrega das chaves.
-        </p>
+            <p>
+                Sou corretora de imóveis especializada em empreendimentos da Cury.
+                Meu compromisso é oferecer um atendimento transparente, ágil e personalizado,
+                ajudando cada cliente a encontrar o imóvel ideal de acordo com seus objetivos e orçamento.
+            </p>
 
-        <a href="https://wa.me/55SEUNUMERO" class="btn-card">
-            Falar comigo no WhatsApp
-        </a>
+            <p>
+                Acompanho todas as etapas da compra, desde a escolha do empreendimento até a assinatura do contrato,
+                esclarecendo dúvidas e buscando as melhores oportunidades para que você realize o sonho do seu imóvel
+                com segurança e tranquilidade.
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- SIMULADOR (base simples) -->
+<!-- SIMULADOR -->
 <section id="simulador">
 
     <h2>Simulador de Financiamento</h2>
 
-    <p>Em breve você poderá simular seu financiamento aqui de forma automática.</p>
+    <p>Em breve você poderá simular seu financiamento aqui.</p>
+
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+
+    <h2>Fale comigo</h2>
+
+    <p>Email: dina.lima@creci.org.br</p>
+    <p>Instagram: @dina.lima88</p>
+    <p>WhatsApp: (11) 98879-8286</p>
 
 </section>
 
