@@ -109,13 +109,55 @@
 </section>
 
 <!-- SIMULADOR -->
-<section id="simulador">
+<section id="simulador" class="simulador">
 
     <h2>Simulador de Financiamento</h2>
 
-    <p>Em breve você poderá simular seu financiamento aqui.</p>
+    <p>Descubra uma estimativa do valor do seu financiamento.</p>
+
+    <div class="sim-box">
+
+        <label>Valor do imóvel (R$)</label>
+        <input type="number" id="valorImovel" placeholder="Ex: 250000">
+
+        <label>Entrada (%)</label>
+        <input type="number" id="entrada" placeholder="Ex: 20">
+
+        <label>Prazo (anos)</label>
+        <input type="number" id="prazo" placeholder="Ex: 30">
+
+        <button onclick="calcularFinanciamento()" class="btn">
+            Calcular
+        </button>
+
+        <h3 id="resultado"></h3>
+
+    </div>
 
 </section>
+
+<script>
+function calcularFinanciamento() {
+
+    let valor = parseFloat(document.getElementById("valorImovel").value);
+    let entrada = parseFloat(document.getElementById("entrada").value);
+    let prazo = parseFloat(document.getElementById("prazo").value);
+
+    if (!valor || !entrada || !prazo) {
+        document.getElementById("resultado").innerHTML = "Preencha todos os campos.";
+        return;
+    }
+
+    let valorEntrada = valor * (entrada / 100);
+    let valorFinanciado = valor - valorEntrada;
+
+    let parcelas = prazo * 12;
+    let parcela = valorFinanciado / parcelas;
+
+    document.getElementById("resultado").innerHTML =
+        "Parcela estimada: R$ " + parcela.toFixed(2);
+}
+</script>
 
 <!-- CONTATO -->
 <section id="contato">

@@ -264,3 +264,53 @@ h2 {
     }
 
 }
+.simulador {
+    background: white;
+    text-align: center;
+}
+
+.sim-box {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sim-box input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.sim-box button {
+    margin-top: 10px;
+}
+
+#resultado {
+    margin-top: 15px;
+    color: #0F2D52;
+    font-weight: bold;
+}
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* A FOTO AGORA VAI TER ESPAÇO REAL */
+.sobre-container img {
+    width: 280px !important;
+    height: 280px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+/* TEXTO NÃO “EMPURRA” A FOTO */
+.sobre-container div {
+    flex: 1;
+}
