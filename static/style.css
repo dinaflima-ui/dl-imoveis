@@ -1,169 +1,55 @@
+/* =========================
+   GERAL
+========================= */
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     background: #f5f7fb;
-    color: #1c1c1c;
+    color: #333;
 }
 
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #0F2D52;
-    color: white;
-}
+/* =========================
+   HERO
+========================= */
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-box {
-    background: #C8A35F;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 14px;
-    border-radius: 6px;
-}
-
-.logo-text strong {
-    display: block;
-    font-size: 16px;
-}
-
-.logo-text span {
-    font-size: 12px;
-    opacity: 0.8;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
-}
-
-.menu a:hover {
-    color: #C8A35F;
-}
-
-.whatsapp-btn {
-    background: #25D366;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* HERO */
 .hero {
-    background: url("/static/banner.jpg") center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 50px;
+    background: linear-gradient(135deg, #0F2D52, #1b3f6b);
     color: white;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 42px;
-    max-width: 500px;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 500px;
-}
-
-.btn, .btn2 {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .btn {
     background: #C8A35F;
     color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
 }
 
 .btn2 {
     background: white;
     color: #0F2D52;
-    margin-left: 10px;
-}
-
-/* SEÇÕES */
-section {
-    padding: 60px 40px;
-}
-
-h2 {
-    color: #0F2D52;
-    margin-bottom: 20px;
-}
-
-/* CARDS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card h3 {
-    margin: 10px;
-}
-
-.card p {
-    margin: 10px;
-    font-size: 14px;
-}
-
-.card strong {
-    margin: 10px;
-    display: block;
-    color: #0F2D52;
-}
-
-.btn-card {
-    display: block;
-    text-align: center;
-    background: #25D366;
-    color: white;
-    padding: 10px;
+    padding: 12px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 0 0 10px 10px;
+    margin: 5px;
+    display: inline-block;
 }
 
-/* FOOTER */
-.footer {
-    background: #0F2D52;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 13px;
-}
 /* =========================
    BEM-VINDO
 ========================= */
@@ -177,15 +63,52 @@ h2 {
 .bemvindo h2 {
     color: #0F2D52;
     font-size: 28px;
-    margin-bottom: 15px;
 }
 
 .bemvindo p {
     max-width: 800px;
     margin: 10px auto;
-    font-size: 16px;
-    color: #555;
     line-height: 1.6;
+    color: #555;
+}
+
+/* =========================
+   IMÓVEIS
+========================= */
+
+#imoveis {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-card {
+    background: #0F2D52;
+    color: white;
+    padding: 10px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
 }
 
 /* =========================
@@ -207,7 +130,6 @@ h2 {
     padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .filtros button:hover {
@@ -219,54 +141,49 @@ h2 {
 ========================= */
 
 .sobre {
-    background: #f5f7fb;
+    background: white;
+    padding: 60px 20px;
 }
 
 .sobre-container {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: 50px;
     max-width: 1100px;
     margin: auto;
 }
 
-.foto-sobre {
-    width: 180px;
-    height: 180px;
+.sobre-container img {
+    width: 320px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.sobre-container div {
+    flex: 1;
+    line-height: 1.6;
 }
 
 .sobre-container h2 {
     color: #0F2D52;
-    margin-bottom: 5px;
 }
 
 .sobre-container h4 {
     color: #C8A35F;
-    margin-bottom: 15px;
 }
 
 /* =========================
-   RESPONSIVO
+   SIMULADOR
 ========================= */
 
-@media (max-width: 768px) {
-
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-}
 .simulador {
-    background: white;
+    background: #f5f7fb;
     text-align: center;
+    padding: 60px 20px;
 }
 
 .sim-box {
@@ -283,34 +200,40 @@ h2 {
     border: 1px solid #ccc;
 }
 
-.sim-box button {
-    margin-top: 10px;
-}
-
 #resultado {
     margin-top: 15px;
-    color: #0F2D52;
     font-weight: bold;
-}
-.sobre-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
+    color: #0F2D52;
 }
 
-/* A FOTO AGORA VAI TER ESPAÇO REAL */
-.sobre-container img {
-    width: 280px !important;
-    height: 280px !important;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    flex-shrink: 0;
+/* =========================
+   CONTATO
+========================= */
+
+#contato {
+    text-align: center;
+    padding: 40px;
+    background: #0F2D52;
+    color: white;
 }
 
-/* TEXTO NÃO “EMPURRA” A FOTO */
-.sobre-container div {
-    flex: 1;
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-container img {
+        width: 260px;
+        height: 260px;
+    }
 }
