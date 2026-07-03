@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block conteudo %}
+
+<h2 style="text-align:center; margin-top:40px;">Novo Imóvel</h2>
+
+<form method="POST" enctype="multipart/form-data"
+style="max-width:400px; margin:30px auto; display:flex; flex-direction:column; gap:10px;">
+
+    <input type="text" name="titulo" placeholder="Título" required>
+
+    <textarea name="descricao" placeholder="Descrição" required></textarea>
+
+    <input type="text" name="preco" placeholder="Preço" required>
+
+    <input type="text" name="bairro" placeholder="Bairro" required>
+
+    <input type="number" name="dormitorios" placeholder="Dormitórios" required>
+
+    <input type="number" name="vagas" placeholder="Vagas" required>
+
+    <input type="file" name="imagem" required>
+
+    <button type="submit" class="botao">Salvar Imóvel</button>
+
+</form>
+
+{% endblock %}

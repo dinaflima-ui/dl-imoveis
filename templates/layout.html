@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cury Imóveis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>CURY IMÓVEIS</h2>
+    </div>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="#">Empreendimentos</a>
+        <a href="#">Minha Casa Minha Vida</a>
+        <a href="#">Contato</a>
+        <a href="/login">Área Administrativa</a>
+    </nav>
+</header>
+
+{% block conteudo %}
+{% endblock %}
+
+</body>
+</html>

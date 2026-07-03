@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block conteudo %}
+
+<h2 style="text-align:center; margin-top:80px;">Login Administrativo</h2>
+
+<form method="POST" style="max-width:300px; margin:40px auto; display:flex; flex-direction:column; gap:10px;">
+
+    <input type="text" name="usuario" placeholder="Usuário" required>
+    <input type="password" name="senha" placeholder="Senha" required>
+
+    <button type="submit" class="botao">Entrar</button>
+
+</form>
+
+{% endblock %}
