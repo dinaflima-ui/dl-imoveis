@@ -53,3 +53,31 @@
 </section>
 
 {% endblock %}
+<section id="imoveis">
+
+    <h2>Imóveis disponíveis</h2>
+
+    {% for imovel in imoveis %}
+
+    <div class="card">
+
+        <h3>{{ imovel['titulo'] }}</h3>
+
+        <p>{{ imovel['descricao'] }}</p>
+
+        <p>R$ {{ imovel['preco'] }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</section>
+<section id="sobre">
+
+    <h2>Sobre a corretora</h2>
+
+    <p>
+        Atendimento personalizado para te ajudar a encontrar seu imóvel ideal.
+    </p>
+
+</section>
