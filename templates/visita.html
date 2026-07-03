@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Agendar Visita{% endblock %}
+
+{% block content %}
+
+<h1>Agende sua visita</h1>
+
+<form method="POST" class="form-visita">
+
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label>Telefone:</label>
+    <input type="text" name="telefone" required>
+
+    <label>Imóvel de interesse:</label>
+    <input type="text" name="imovel" required>
+
+    <button type="submit">Enviar para WhatsApp</button>
+
+</form>
+
+{% endblock %}

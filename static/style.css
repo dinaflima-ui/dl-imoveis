@@ -237,3 +237,29 @@ body {
         height: 260px;
     }
 }
+.form-visita {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-visita input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-visita button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-visita button:hover {
+    background: darkgreen;
+}
