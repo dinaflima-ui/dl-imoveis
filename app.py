@@ -5,7 +5,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-# 📦 BANCO DE DADOS
+# 📦 BANCO DE DADOS (CRM)
 def init_db():
     conn = sqlite3.connect("leads.db")
     c = conn.cursor()
@@ -16,6 +16,7 @@ def init_db():
         nome TEXT,
         telefone TEXT,
         imovel TEXT,
+        status TEXT,
         data TEXT
     )
     """)
@@ -31,7 +32,7 @@ def index():
     imoveis = []
     return render_template("index.html", imoveis=imoveis)
 
-# 🔐 Admin
+# 🔐 ADMIN (CRM)
 @app.route("/admin")
 def admin():
     conn = sqlite3.connect("leads.db")
@@ -44,17 +45,17 @@ def admin():
 
     return render_template("admin.html", leads=leads)
 
-# 🔑 Login
+# 🔑 LOGIN
 @app.route("/login")
 def login():
     return render_template("login.html")
 
-# ➕ Novo imóvel
+# ➕ NOVO IMÓVEL
 @app.route("/novo-imovel")
 def novo_imovel():
     return render_template("novo_imovel.html")
 
-# 📅 CRM + WhatsApp
+# 📅 VISITA (CRM + WHATSAPP)
 @app.route("/visita", methods=["GET", "POST"])
 def visita():
     if request.method == "POST":
@@ -62,14 +63,20 @@ def visita():
         telefone = request.form["telefone"]
         imovel = request.form["imovel"]
 
-        # salvar no banco
+        # salvar no banco (CRM)
         conn = sqlite3.connect("leads.db")
         c = conn.cursor()
 
         c.execute("""
-            INSERT INTO leads (nome, telefone, imovel, data)
-            VALUES (?, ?, ?, ?)
-        """, (nome, telefone, imovel, datetime.now()))
+        INSERT INTO leads (nome, telefone, imovel, status, data)
+        VALUES (?, ?, ?, ?, ?)
+        """, (
+            nome,
+            telefone,
+            imovel,
+            "Novo",
+            datetime.now().strftime("%Y-%m-%d %H:%M")
+        ))
 
         conn.commit()
         conn.close()

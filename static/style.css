@@ -14,10 +14,30 @@ body {
 ========================= */
 
 .hero {
-    background: linear-gradient(135deg, #0F2D52, #1b3f6b);
+    background: url("https://images.unsplash.com/photo-1507089947368-19c1da9775ae") center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 140px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -28,6 +48,14 @@ body {
 .hero p {
     font-size: 18px;
     margin-bottom: 20px;
+}
+.hero h1,
+.hero p,
+.hero a,
+.hero .btn,
+.hero .btn2 {
+    position: relative;
+    z-index: 2;
 }
 
 .btn {
