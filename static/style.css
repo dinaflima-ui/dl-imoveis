@@ -1,3 +1,4 @@
+
 /* =========================
    GERAL
 ========================= */
@@ -10,7 +11,41 @@ body {
 }
 
 /* =========================
-   HERO
+   HEADER (MENU PROFISSIONAL)
+========================= */
+
+header {
+    background: #0F2D52;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area h2 {
+    color: white;
+    margin: 0;
+}
+
+.creci {
+    margin: 0;
+    font-size: 12px;
+    color: #C8A35F;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #C8A35F;
+}
+
+/* =========================
+   HERO (BANNER COM IMAGEM)
 ========================= */
 
 .hero {
@@ -19,12 +54,13 @@ body {
     text-align: center;
     padding: 140px 20px;
     position: relative;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 500px;
 }
 
+/* overlay escuro */
 .hero::before {
     content: "";
     position: absolute;
@@ -35,6 +71,7 @@ body {
     background: rgba(0,0,0,0.45);
 }
 
+/* texto acima do overlay */
 .hero * {
     position: relative;
     z-index: 2;
@@ -49,15 +86,8 @@ body {
     font-size: 18px;
     margin-bottom: 20px;
 }
-.hero h1,
-.hero p,
-.hero a,
-.hero .btn,
-.hero .btn2 {
-    position: relative;
-    z-index: 2;
-}
 
+/* botões */
 .btn {
     background: #C8A35F;
     color: white;
@@ -140,31 +170,6 @@ body {
 }
 
 /* =========================
-   FILTROS
-========================= */
-
-.filtros {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.filtros button {
-    background: #0F2D52;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.filtros button:hover {
-    background: #C8A35F;
-}
-
-/* =========================
    SOBRE
 ========================= */
 
@@ -205,33 +210,34 @@ body {
 }
 
 /* =========================
-   SIMULADOR
+   FORMULÁRIO VISITA (CRM)
 ========================= */
 
-.simulador {
-    background: #f5f7fb;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.sim-box {
-    max-width: 400px;
+.form-visita {
+    width: 300px;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.sim-box input {
-    padding: 10px;
-    border-radius: 6px;
+.form-visita input {
+    padding: 8px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#resultado {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #0F2D52;
+.form-visita button {
+    padding: 10px;
+    background: #C8A35F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-visita button:hover {
+    background: #a8843d;
 }
 
 /* =========================
@@ -264,86 +270,4 @@ body {
         width: 260px;
         height: 260px;
     }
-}
-.form-visita {
-    width: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-visita input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-visita button {
-    padding: 10px;
-   background: #C8A35F;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.form-visita button:hover {
-    background: #a8843d;
-}
-header {
-    background: #0F2D52;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header h2 {
-    color: white;
-    margin: 0;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
-}
-
-header a:hover {
-    color: #C8A35F;
-}
-header {
-    background: #0F2D52;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area h2 {
-    color: white;
-    margin: 0;
-}
-
-.creci {
-    margin: 0;
-    font-size: 12px;
-    color: #C8A35F;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #C8A35F;
-}
-
-.container {
-    padding: 20px;
 }
