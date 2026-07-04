@@ -1,4 +1,3 @@
-
 /* =========================
    GERAL
 ========================= */
@@ -11,102 +10,109 @@ body {
 }
 
 /* =========================
-   HEADER (MENU PROFISSIONAL)
+   HEADER PROFISSIONAL
 ========================= */
 
-header {
+.header {
     background: #0F2D52;
-    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 30px;
 }
 
 .logo-area h2 {
-    color: white;
+    color: #fff;
     margin: 0;
 }
 
 .creci {
-    margin: 0;
+    color: #fff;
     font-size: 12px;
-    color: white;
+    margin: 0;
+    opacity: 0.85;
 }
 
-
-nav a {
-    color: white;
+.menu a {
+    color: #fff;
     text-decoration: none;
     margin-left: 15px;
     font-weight: bold;
 }
 
-nav a:hover {
+.menu a:hover {
     color: #C8A35F;
 }
 
+/* BOTÃO WHATSAPP */
+.whatsapp-btn {
+    background: #25D366;
+    color: white !important;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
 /* =========================
-   HERO (BANNER COM IMAGEM)
+   CONTAINER
+========================= */
+
+.container {
+    padding: 20px;
+}
+
+/* =========================
+   HERO / BANNER
 ========================= */
 
 .hero {
     background: url("/static/banner.jpg") center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 140px 20px;
-    position: relative;
-    min-height: 500px;
+    min-height: 520px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
-/* overlay escuro */
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.45);
+    inset: 0;
+    background: rgba(0,0,0,0.5);
 }
 
-/* texto acima do overlay */
 .hero * {
     position: relative;
     z-index: 2;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 20px;
 }
 
-/* botões */
+/* =========================
+   BOTÕES
+========================= */
+
 .btn {
     background: #C8A35F;
     color: white;
     padding: 12px 20px;
     border-radius: 6px;
     text-decoration: none;
-    margin: 5px;
     display: inline-block;
+    margin: 5px;
 }
 
-.btn2 {
-    background: white;
-    color: #0F2D52;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin: 5px;
-    display: inline-block;
+.btn:hover {
+    background: #a8843d;
 }
 
 /* =========================
@@ -121,24 +127,11 @@ nav a:hover {
 
 .bemvindo h2 {
     color: #0F2D52;
-    font-size: 28px;
-}
-
-.bemvindo p {
-    max-width: 800px;
-    margin: 10px auto;
-    line-height: 1.6;
-    color: #555;
 }
 
 /* =========================
    IMÓVEIS
 ========================= */
-
-#imoveis {
-    padding: 60px 20px;
-    text-align: center;
-}
 
 .grid {
     display: grid;
@@ -155,67 +148,12 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.btn-card {
-    background: #0F2D52;
-    color: white;
-    padding: 10px;
-    display: block;
-    margin-top: 10px;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
 /* =========================
-   SOBRE
-========================= */
-
-.sobre {
-    background: white;
-    padding: 60px 20px;
-}
-
-.sobre-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.sobre-container img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    flex-shrink: 0;
-}
-
-.sobre-container div {
-    flex: 1;
-    line-height: 1.6;
-}
-
-.sobre-container h2 {
-    color: #0F2D52;
-}
-
-.sobre-container h4 {
-    color: #C8A35F;
-}
-
-/* =========================
-   FORMULÁRIO VISITA (CRM)
+   FORM VISITA (CRM)
 ========================= */
 
 .form-visita {
-    width: 300px;
+    width: 320px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -223,18 +161,18 @@ nav a:hover {
 }
 
 .form-visita input {
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .form-visita button {
-    padding: 10px;
+    padding: 12px;
     background: #C8A35F;
     color: white;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .form-visita button:hover {
@@ -242,14 +180,19 @@ nav a:hover {
 }
 
 /* =========================
-   CONTATO
+   TABELA CRM
 ========================= */
 
-#contato {
-    text-align: center;
-    padding: 40px;
-    background: #0F2D52;
-    color: white;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
 /* =========================
@@ -258,32 +201,13 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
     .hero h1 {
         font-size: 28px;
     }
-
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sobre-container img {
-        width: 260px;
-        height: 260px;
-    }
-}
-.whatsapp-btn {
-    background: #25D366;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebe5d;
 }

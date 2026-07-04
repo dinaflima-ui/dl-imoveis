@@ -1,48 +1,82 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
-{% block conteudo %}
+{% block content %}
 
-<h2 style="text-align:center; margin-top:40px;">Painel Administrativo</h2>
+<h2 style="text-align:center; margin-top:30px; color:#0F2D52;">
+    Painel Administrativo (CRM + Imóveis)
+</h2>
 
 <div style="text-align:center; margin:20px;">
-    <a href="/novo_imovel">+ Novo Imóvel</a> |
-    <a href="/logout">Sair</a>
+    <a class="btn" href="/novo-imovel">+ Novo Imóvel</a>
 </div>
 
-<div class="imoveis">
+<hr>
 
-    <h2>Imóveis cadastrados</h2>
+<!-- =========================
+     CRM DE LEADS
+========================= -->
 
-    <div class="grid">
+<h3 style="text-align:center;">Leads (Clientes)</h3>
 
-        {% for imovel in imoveis %}
+<table>
 
-        <div class="card">
+    <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Imóvel</th>
+        <th>Data</th>
+    </tr>
 
-            {% if imovel["imagem"] %}
-                <img src="{{ url_for('static', filename='uploads/' + imovel['imagem']) }}"
-                     style="width:100%; border-radius:10px; margin-bottom:10px;">
-            {% else %}
-                <div style="width:100%; height:150px; background:#ddd; border-radius:10px; margin-bottom:10px;"></div>
-            {% endif %}
+    {% for lead in leads %}
+    <tr>
+        <td>{{ lead[1] }}</td>
+        <td>{{ lead[2] }}</td>
+        <td>{{ lead[3] }}</td>
+        <td>{{ lead[4] }}</td>
+    </tr>
+    {% endfor %}
 
-            <h3>{{ imovel["titulo"] }}</h3>
-            <p>{{ imovel["dormitorios"] }} dormitórios • {{ imovel["vagas"] }} vagas</p>
-            <strong>{{ imovel["preco"] }}</strong>
+</table>
 
-            <div style="margin-top:10px;">
-                <a href="/editar/{{ imovel['id'] }}">Editar</a> |
-                <a href="/deletar/{{ imovel['id'] }}"
-                   onclick="return confirm('Tem certeza que deseja excluir este imóvel?')">
-                   Excluir
-                </a>
-            </div>
+<hr>
 
+<!-- =========================
+     IMÓVEIS
+========================= -->
+
+<h3 style="text-align:center;">Imóveis cadastrados</h3>
+
+<div class="grid">
+
+    {% for imovel in imoveis %}
+
+    <div class="card">
+
+        {% if imovel["imagem"] %}
+            <img src="{{ url_for('static', filename='uploads/' + imovel['imagem']) }}">
+        {% else %}
+            <div style="width:100%; height:150px; background:#ddd; border-radius:10px;"></div>
+        {% endif %}
+
+        <h3>{{ imovel["titulo"] }}</h3>
+
+        <p>
+            {{ imovel["dormitorios"] }} dormitórios •
+            {{ imovel["vagas"] }} vagas
+        </p>
+
+        <strong>{{ imovel["preco"] }}</strong>
+
+        <div style="margin-top:10px;">
+            <a href="/editar/{{ imovel['id'] }}">Editar</a> |
+            <a href="/deletar/{{ imovel['id'] }}" onclick="return confirm('Excluir imóvel?')">
+                Excluir
+            </a>
         </div>
 
-        {% endfor %}
-
     </div>
+
+    {% endfor %}
 
 </div>
 

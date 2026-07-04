@@ -2,23 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Site Cury{% endblock %}</title>
+    <title>{% block title %}Site Imobiliário{% endblock %}</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<header>
+<header class="header">
     <div class="logo-area">
-        <h2>Site Imobiliário</h2>
-        <p class="creci">Diná Cury | CRECI XXXX</p>
+        <h2>Diná Cury</h2>
+        <p class="creci">CRECI XXXX</p>
     </div>
 
-    <nav>
+    <nav class="menu">
         <a href="/">Home</a>
         <a href="/visita">Visita</a>
-        <a href="/admin">Admin</a>
+        <a href="/admin">CRM</a>
 
         <a class="whatsapp-btn" href="https://wa.me/5511988798286" target="_blank">
             WhatsApp
