@@ -5,43 +5,26 @@
     <title>{% block title %}Site Cury{% endblock %}</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    <style>
-        header {
-            background: #0F2D52;
-            padding: 15px;
-        }
-
-        header a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header h2 {
-            color: white;
-            display: inline-block;
-            margin-right: 30px;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial;
-        }
-    </style>
 </head>
 
 <body>
 
 <header>
-    <h2>Site Imobiliário</h2>
-    <a href="/">Home</a>
-    <a href="/visita">Visita</a>
-    <a href="/admin">Admin</a>
+    <div class="logo-area">
+        <h2>Site Imobiliário</h2>
+        <p class="creci">
+            Diná Cury | CRECI XXXX
+        </p>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/visita">Visita</a>
+        <a href="/admin">Admin</a>
+    </nav>
 </header>
 
-<div style="padding: 20px;">
+<div class="container">
     {% block content %}{% endblock %}
 </div>
 

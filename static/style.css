@@ -14,7 +14,7 @@ body {
 ========================= */
 
 .hero {
-    background: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb") center/cover no-repeat;
+    background: url("/static/banner.jpg") center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 140px 20px;
@@ -313,4 +313,37 @@ header a {
 
 header a:hover {
     color: #C8A35F;
+}
+header {
+    background: #0F2D52;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area h2 {
+    color: white;
+    margin: 0;
+}
+
+.creci {
+    margin: 0;
+    font-size: 12px;
+    color: #C8A35F;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #C8A35F;
+}
+
+.container {
+    padding: 20px;
 }
